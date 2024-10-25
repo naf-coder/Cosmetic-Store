@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import { FaBars } from "react-icons/fa6"; // bar icon from react icon
 import { HiOutlineShoppingBag } from "react-icons/hi2";
@@ -7,9 +7,12 @@ import { IoIosSearch } from "react-icons/io";
 
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
+import { CartContext } from "../App";
 
 function Navbar() {
   const [openBar, setOpenBar] = useState(false);
+  const { cart } = useContext(CartContext);
+  console.log("Cart: ", cart);
 
   return (
     <header className="min-w-screen font-light">
@@ -48,8 +51,8 @@ function Navbar() {
                   <HiOutlineShoppingBag className="mr-2 text-3xl text-[#53280f] relative" />
                 </Link>
                 {/* Update cart count */}
-                <span className="absolute top-[7%] right-[3%] w-5 h-5 text-sm rounded-full bg-black text-white">
-                  0
+                <span className="absolute top-[7%] right-[3%] w-5 h-5 text-sm rounded-full  ">
+                  {cart.length}
                 </span>
               </button>
             </div>

@@ -1,8 +1,15 @@
 import PropTypes from "prop-types";
+import { useContext } from "react";
+import { CartContext } from "../App";
 
 // import { CiHeart } from "react-icons/ci";
 
 const Card = (props) => {
+  const { cart, setCart } = useContext(CartContext);
+
+  const handleAddToBag = (props) => {
+    setCart([...cart, props]);
+  };
   return (
     <>
       <div className=" h-[40vh] md:h-[50vh] w-[10vh] md:w-[20%] flex flex-col items-center border border-[#c38662]">
@@ -18,7 +25,10 @@ const Card = (props) => {
         <p>{props.productcolors}</p>
         <p>{props.rating}</p>
         <div className="flex justify-center items-center min-w-full">
-          <button className="bg-[#c38662] text-white w-[50%] h-10 rounded-lg">
+          <button
+            onClick={() => handleAddToBag(props)}
+            className="bg-[#c38662] text-white w-[50%] h-10 rounded-lg"
+          >
             {props.button || "Add to Bag"}
           </button>
           {/* <button>
