@@ -14,7 +14,6 @@ function Blush() {
       const { data } = await axios.get(
         `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=blush`
       );
-      console.log(data);
       setProductData(data);
       setLoading(false);
     } catch (error) {

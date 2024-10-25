@@ -1,13 +1,11 @@
 import PropTypes from "prop-types";
-import { useContext } from "react";
-import { CartContext } from "../App";
 
-const Card = (props) => {
-  const { cart, setCart } = useContext(CartContext);
+// import { useContext } from "react";
+// import { CartContext } from "../App";
 
-  const handleAddToBag = (props) => {
-    setCart([...cart, props]);
-  };
+function Cartcard(props) {
+  //   const { cart } = useContext(CartContext);
+
   return (
     <>
       <div className=" h-[40vh] md:h-[50vh] w-[10vh] md:w-[20%] flex flex-col items-center border border-[#c38662]">
@@ -22,22 +20,22 @@ const Card = (props) => {
         <p>{props.category}</p>
         <p>{props.productcolors}</p>
         <p>{props.rating}</p>
-        <div className="flex justify-center items-center min-w-full">
-          <button
-            onClick={() => handleAddToBag(props)}
-            className="bg-[#c38662] text-white w-[50%] h-10 rounded-lg"
-          >
-            {props.button || "Add to Bag"}
+        <div className="flex flex-col justify-center items-center min-w-full">
+          <button className="bg-[#c38662] text-white w-[50%] h-10 rounded-lg m-1">
+            Added
+          </button>
+          <button className="bg-[#c38662] text-white w-[50%] h-10 rounded-lg m-1">
+            Remove
           </button>
         </div>
       </div>
     </>
   );
-};
-Card.propTypes = {
+}
+Cartcard.propTypes = {
   name: PropTypes.string,
   brand: PropTypes.string,
-  price: PropTypes.number,
+  price: PropTypes.string,
   category: PropTypes.string,
   productcolors: PropTypes.string,
   rating: PropTypes.number,
@@ -46,4 +44,4 @@ Card.propTypes = {
   onButtonClick: PropTypes.func,
 };
 
-export default Card;
+export default Cartcard;
