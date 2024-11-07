@@ -1,5 +1,5 @@
 function Offers() {
-  return <div>Offers</div>;
+  return <></>;
 }
 
 export default Offers;

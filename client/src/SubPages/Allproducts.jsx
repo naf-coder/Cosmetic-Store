@@ -1,19 +1,20 @@
 import Card from "../components/Card";
 import Navbar from "../components/Navbar";
-
-import axios from "axios";
+import { IoIosSearch } from "react-icons/io";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
-function Nailpolish() {
+function Allproducts() {
+  // const inputRef = useRef();
   const [productData, setProductData] = useState([]);
   const [isLoading, setLoading] = useState(true);
+
   const search = async () => {
     setLoading(true);
     try {
       const { data } = await axios.get(
-        `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=Nail polish`
+        `http://makeup-api.herokuapp.com/api/v1/products.json`
       );
-      console.log(data);
       setProductData(data);
       setLoading(false);
     } catch (error) {
@@ -38,10 +39,18 @@ function Nailpolish() {
   return (
     <>
       <Navbar />
-      <hr />
-      <main className="min-w-screen font-light">
-        <h1 className="text-center text-2xl my-5 ">Nail Polish</h1>
-        <div className="flex flex-wrap items-center justify-center space-y-2 space-x-2">
+      <main className="min-w-screen font-light mx-5 md:mx-10 flex-col ">
+        <section className="flex justify-center items-center my-3">
+          <input
+            type="text"
+            placeholder="Explor Our Beauty Collections"
+            className="w-64 rounded-lg p-2 text-center border border-black"
+          />
+          <button className="w-10 h-10 rounded-lg flex items-center justify-center ml-2 border border-black">
+            <IoIosSearch />
+          </button>
+        </section>
+        <div className="flex flex-wrap items-center justify-center space-y-2 space-x-2 ">
           {productData.map((item) => (
             <Card
               key={item.id}
@@ -59,4 +68,4 @@ function Nailpolish() {
   );
 }
 
-export default Nailpolish;
+export default Allproducts;

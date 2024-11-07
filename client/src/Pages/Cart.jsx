@@ -35,6 +35,7 @@ function Cart() {
                   category={item.category}
                   rating={item.rating}
                   image={item.image}
+                  id={item.id}
                 />
               ))}
             </>

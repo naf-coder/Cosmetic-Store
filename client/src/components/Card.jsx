@@ -10,22 +10,26 @@ const Card = (props) => {
   };
   return (
     <>
-      <div className=" h-[40vh] md:h-[50vh] w-[10vh] md:w-[20%] flex flex-col items-center border border-[#c38662]">
+      <div className=" h-[40vh] md:h-[60vh] w-[10vh] md:w-[20%]  flex flex-col items-center justify-center border border-[#c38662]  rounded-lg shadow-2xl  overflow-hidden ">
         <img
           src={props.image}
           alt="Product image"
-          className="w-[100%] h-[55%]"
+          className="w-full h-48 object-cover"
         />
+        <p className="text-center text-base font-bold text-gray-800">
+          {props.name}
+        </p>
 
-        <p>{props.name}</p>
-        <p>${props.price}</p>
         <p>{props.category}</p>
         <p>{props.productcolors}</p>
         <p>{props.rating}</p>
-        <div className="flex justify-center items-center min-w-full">
+        <div className="flex justify-between items-center min-w-full p-5">
+          <span className="text-xl font-bold text-gray-900">
+            ${props.price}
+          </span>
           <button
             onClick={() => handleAddToBag(props)}
-            className="bg-[#c38662] text-white w-[50%] h-10 rounded-lg"
+            className="bg-[#c38662] text-white px-4 py-2 rounded-lg"
           >
             {props.button || "Add to Bag"}
           </button>

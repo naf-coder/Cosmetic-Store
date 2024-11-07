@@ -26,7 +26,13 @@ function Eyeshadow() {
   }, []);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <>
+        <div className="min-w-screen min-h-screen flex justify-center items-center">
+          <iframe src="https://lottie.host/embed/a79ea6d6-a84f-4b6c-b585-adc35a81e9d9/apTFqZSRt5.json" />
+        </div>
+      </>
+    );
   }
   return (
     <>
@@ -43,6 +49,7 @@ function Eyeshadow() {
               name={item.name}
               category={item.category}
               rating={item.rating}
+              id={item.id}
             />
           ))}
         </div>

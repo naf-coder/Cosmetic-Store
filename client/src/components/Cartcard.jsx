@@ -1,14 +1,21 @@
 import PropTypes from "prop-types";
 
-// import { useContext } from "react";
-// import { CartContext } from "../App";
+import { useContext } from "react";
+import { CartContext } from "../App";
 
 function Cartcard(props) {
-  //   const { cart } = useContext(CartContext);
+  const { cart, setCart } = useContext(CartContext);
+
+  const handleDeleteFromCart = (item, cart) => {
+    console.log("Item: ", item);
+    console.log("cart", cart);
+    const filteredArray = cart.filter((cartItem) => cartItem.id !== item.id);
+    setCart(filteredArray);
+  };
 
   return (
     <>
-      <div className=" h-[40vh] md:h-[50vh] w-[10vh] md:w-[20%] flex flex-col items-center border border-[#c38662]">
+      <div className=" h-[50vh] md:h-[55vh] w-[16h] md:w-[25%] flex flex-col items-center border border-[#c38662] m-3">
         <img
           src={props.image}
           alt="Product image"
@@ -24,7 +31,10 @@ function Cartcard(props) {
           <button className="bg-[#c38662] text-white w-[50%] h-10 rounded-lg m-1">
             Added
           </button>
-          <button className="bg-[#c38662] text-white w-[50%] h-10 rounded-lg m-1">
+          <button
+            onClick={() => handleDeleteFromCart(props, cart)}
+            className="bg-[#c38662] text-white w-[50%] h-10 rounded-lg m-1"
+          >
             Remove
           </button>
         </div>

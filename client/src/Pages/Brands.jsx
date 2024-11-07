@@ -18,37 +18,40 @@ function Brands() {
     <>
       <Navbar />
       <main className="min-w-screen">
-        <section className=" mx-5 md:mx-10">
-          <h1 className="text-center text-3xl font-light my-10">Brands</h1>
-          <span className="md:flex justify-center items-center flex-wrap ">
-            <div className="m-5 w-[30vh] h-[20vh] py-5 px-5 border border-black flex items-center rounded-lg">
+        <section className=" mx-5 md:mx-10 my-5">
+          <h1 className="text-center text-2xl my-5 font-poppins text-[#c38662]">
+            Brands
+          </h1>
+          <hr className="my-5" />
+          <section className="md:flex justify-center items-center flex-wrap">
+            <div className="m-5 w-[30vh] h-[20vh] py-5 px-5 border border-[#c38662] shadow-xl flex items-center rounded-lg  overflow-hidden transform transition-shadow duration-300 hover:shadow-lg hover:shadow-[#c38662] hover:animate-puls">
               <img src={elf} className="h-16" />
             </div>
-            <div className="m-5  w-[30vh] h-[20vh] py-5 px-5 border border-black flex items-center rounded-lg">
+            <div className="m-5 w-[30vh] h-[20vh] py-5 px-5 border border-[#c38662] shadow-xl flex items-center rounded-lg overflow-hidden transform transition-shadow duration-300 hover:shadow-lg hover:shadow-[#c38662] hover:animate-puls">
               <img src={butter} className="h-16" />
             </div>
-            <div className="m-5  w-[30vh] h-[20vh] py-5 px-5 border border-black flex items-center rounded-lg">
+            <div className="m-5 w-[30vh] h-[20vh] py-5 px-5 border border-[#c38662] shadow-xl flex items-center rounded-lg overflow-hidden transform transition-shadow duration-300 hover:shadow-lg hover:shadow-[#c38662] hover:animate-puls">
               <img src={dalish} className="h-16" />
             </div>
-            <div className="m-5  w-[30vh] h-[20vh] py-5 px-5 border border-black flex items-center rounded-lg">
+            <div className="m-5 w-[30vh] h-[20vh] py-5 px-5 border border-[#c38662] shadow-xl flex items-center rounded-lg overflow-hidden transform transition-shadow duration-300 hover:shadow-lg hover:shadow-[#c38662] hover:animate-puls">
               <img src={coastelclassic} className="h-16" />
             </div>
-            <div className="m-5  w-[30vh] h-[20vh] py-5 px-5 border border-black flex items-center rounded-lg">
+            <div className="m-5 w-[30vh] h-[20vh] py-5 px-5 border border-[#c38662]  shadow-xl flex items-center rounded-lg overflow-hidden transform transition-shadow duration-300 hover:shadow-lg hover:shadow-[#c38662] hover:animate-puls">
               <img src={chinaglaze} className="h-16" />
             </div>
-            <div className="m-5  w-[30vh] h-[20vh] py-5 px-5  border border-black flex items-center rounded-lg">
+            <div className="m-5 w-[30vh] h-[20vh] py-5 px-5  border border-[#c38662] shadow-xl flex items-center rounded-lg overflow-hidden transform transition-shadow duration-300 hover:shadow-lg hover:shadow-[#c38662] hover:animate-puls">
               <img src={booshlogo} className="h-16" />
             </div>
-            <div className="m-5  w-[30vh] h-[20vh] py-5 px-5 border border-black flex items-center rounded-lg">
+            <div className="m-5 w-[30vh] h-[20vh] py-5 px-5 border border-[#c38662] shadow-xl flex items-center rounded-lg overflow-hidden transform transition-shadow duration-300 hover:shadow-lg hover:shadow-[#c38662] hover:animate-puls">
               <img src={maybeline} className="h-16" />
             </div>
-            <div className="m-5  w-[30vh] h-[20vh] py-5 px-5  border border-black flex items-center rounded-lg">
+            <div className="m-5 w-[30vh] h-[20vh] py-5 px-5  border border-[#c38662] shadow-xl flex items-center rounded-lg overflow-hidden transform transition-shadow duration-300 hover:shadow-lg hover:shadow-[#c38662] hover:animate-puls">
               <img src={CMgradient} className="h-16" />
             </div>
-            <div className="m-5  w-[30vh] h-[20vh] py-5 px-5  border border-black flex items-center rounded-lg">
+            <div className="m-5 w-[30vh] h-[20vh] py-5 px-5  border border-[#c38662] shadow-xl flex items-center rounded-lg overflow-hidden transform transition-shadow duration-300 hover:shadow-lg hover:shadow-[#c38662] hover:animate-puls">
               <img src={dior} className="h-16" />
             </div>
-          </span>
+          </section>
         </section>
       </main>
       <Footer />
