@@ -5,7 +5,6 @@ import Home from "./Pages/Home";
 import Products from "./Pages/Products";
 import Brands from "./Pages/Brands";
 import Offers from "./Pages/Offers";
-import Blush from "./SubPages/Blush";
 import Bronzer from "./SubPages/Bronzer";
 import Eyebrow from "./SubPages/Eyebrow";
 import Eyeliner from "./SubPages/Eyeliner";
@@ -17,6 +16,7 @@ import Mascara from "./SubPages/Mascara";
 import Nailpolish from "./SubPages/Nailpolish";
 import Cart from "./Pages/Cart";
 import Allproducts from "./SubPages/Allproducts";
+import Blush from "./SubPages/Blush";
 
 export const CartContext = createContext();
 
