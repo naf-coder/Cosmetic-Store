@@ -5,7 +5,7 @@ import Home from "./Pages/Home";
 import Products from "./Pages/Products";
 import Brands from "./Pages/Brands";
 import Offers from "./Pages/Offers";
-import Blush from "./SubPages/blush";
+import Blush from "./SubPages/Blush";
 import Bronzer from "./SubPages/Bronzer";
 import Eyebrow from "./SubPages/Eyebrow";
 import Eyeliner from "./SubPages/Eyeliner";
