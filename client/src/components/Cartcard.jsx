@@ -15,14 +15,16 @@ function Cartcard(props) {
 
   return (
     <>
-      <div className=" h-[50vh] md:h-[55vh] w-[16h] md:w-[25%] flex flex-col items-center border border-[#c38662] m-3">
+      <div className=" h-[40vh] md:h-[60vh] w-[10vh] md:w-[20%]  flex flex-col items-center justify-center border border-[#c38662]  rounded-lg shadow-2xl  overflow-hidden ">
         <img
           src={props.image}
           alt="Product image"
-          className="w-[100%] h-[55%]"
+          className="w-full h-48 object-cover"
         />
 
-        <p>{props.name}</p>
+        <p className="text-center text-base font-bold text-gray-800">
+          {props.name}
+        </p>
         <p>${props.price}</p>
         <p>{props.category}</p>
         <p>{props.productcolors}</p>
