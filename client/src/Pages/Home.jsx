@@ -44,22 +44,31 @@ function Home() {
             Top Categories
           </h1>
           <div className="flex items-center justify-center w-[100%]">
-            <div className="m-2 flex flex-col justify-center items-center">
+            <div
+              className="m-2 flex flex-col justify-center items-center "
+              alt="image"
+            >
               <img src={newlaunch} className="rounded-lg" />
               <h6>New Launch</h6>
             </div>
             <Link to={"/allproducts"}>
-              <div className="m-2  flex flex-col justify-center items-center">
+              <div
+                className="m-2  flex flex-col justify-center items-center"
+                alt="image"
+              >
                 <img src={makeup} className="rounded-lg" />
                 <h6>Makeup</h6>
               </div>
             </Link>
-            <div className="m-2  flex flex-col justify-center items-center">
+            <div
+              className="m-2  flex flex-col justify-center items-center"
+              alt="image"
+            >
               <img src={haircare} className="rounded-lg" />
               <h6>Haircare</h6>
             </div>
             <div className="m-2  flex flex-col justify-center items-center">
-              <img src={skincare} className="rounded-lg " />
+              <img src={skincare} className="rounded-lg " alt="image" />
               <h6>Skincare</h6>
             </div>
           </div>
