@@ -2,7 +2,7 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 import { Link, useNavigate } from "react-router-dom"; // If using react-router-dom
 import { CartContext } from "../App";
 import { useContext } from "react";
-import Cartcard from "../components/CartCard";
+import Cartcard from "../components/Cartcard";
 
 function Cart() {
   const navigate = useNavigate(); // Initialize for routing back
