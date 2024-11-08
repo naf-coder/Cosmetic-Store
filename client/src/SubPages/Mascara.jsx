@@ -10,7 +10,7 @@ function Mascara() {
     setLoading(true);
     try {
       const { data } = await axios.get(
-        `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=mascara`
+        `https://makeup-api.herokuapp.com/api/v1/products.json?product_type=mascara`
       );
       console.log(data);
       setProductData(data);

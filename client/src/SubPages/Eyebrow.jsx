@@ -11,7 +11,7 @@ function Eyebrow() {
     setLoading(true);
     try {
       const { data } = await axios.get(
-        `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=eyebrow`
+        `https://makeup-api.herokuapp.com/api/v1/products.json?product_type=eyebrow`
       );
       console.log(data);
       setProductData(data);

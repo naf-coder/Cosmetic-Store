@@ -11,7 +11,7 @@ function Bronzer() {
     setLoading(true);
     try {
       const { data } = await axios.get(
-        `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=bronzer`
+        `https://makeup-api.herokuapp.com/api/v1/products.json?product_type=bronzer`
       );
       console.log(data);
       setProductData(data);

@@ -11,7 +11,7 @@ function Foundation() {
     setLoading(true);
     try {
       const { data } = await axios.get(
-        `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=foundation`
+        `https://makeup-api.herokuapp.com/api/v1/products.json?product_type=foundation`
       );
       console.log(data);
       setProductData(data);

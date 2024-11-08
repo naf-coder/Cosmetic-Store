@@ -11,7 +11,7 @@ function Lipliner() {
     setLoading(true);
     try {
       const { data } = await axios.get(
-        `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=Lip liner`
+        `https://makeup-api.herokuapp.com/api/v1/products.json?product_type=Lip liner`
       );
       console.log(data);
       setProductData(data);

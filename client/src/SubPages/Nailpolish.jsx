@@ -11,7 +11,7 @@ function Nailpolish() {
     setLoading(true);
     try {
       const { data } = await axios.get(
-        `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=Nail polish`
+        `https://makeup-api.herokuapp.com/api/v1/products.json?product_type=Nail polish`
       );
       console.log(data);
       setProductData(data);
