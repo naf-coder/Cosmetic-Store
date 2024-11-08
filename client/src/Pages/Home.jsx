@@ -43,32 +43,39 @@ function Home() {
           <h1 className="text-center text-3xl font-light my-5 text-[#c38662]">
             Top Categories
           </h1>
-          <div className="flex items-center justify-center w-[100%]">
-            <div
-              className="m-2 flex flex-col justify-center items-center "
-              alt="image"
-            >
-              <img src={newlaunch} className="rounded-lg" />
+          <div className="flex items-center justify-center">
+            <div className="flex flex-col justify-center items-center ">
+              <img
+                src={newlaunch}
+                className="rounded-lg h-[80%] w-[80%]"
+                alt="image"
+              />
               <h6>New Launch</h6>
             </div>
             <Link to={"/allproducts"}>
-              <div
-                className="m-2  flex flex-col justify-center items-center"
-                alt="image"
-              >
-                <img src={makeup} className="rounded-lg" />
+              <div className="flex flex-col justify-center items-center">
+                <img
+                  src={makeup}
+                  className="rounded-lg  h-[80%] w-[80%]"
+                  alt="image"
+                />
                 <h6>Makeup</h6>
               </div>
             </Link>
-            <div
-              className="m-2  flex flex-col justify-center items-center"
-              alt="image"
-            >
-              <img src={haircare} className="rounded-lg" />
+            <div className="flex flex-col justify-center items-center">
+              <img
+                src={haircare}
+                className="rounded-lg h-[80%] w-[80%]"
+                alt="image"
+              />
               <h6>Haircare</h6>
             </div>
-            <div className="m-2  flex flex-col justify-center items-center">
-              <img src={skincare} className="rounded-lg " alt="image" />
+            <div className="flex flex-col justify-center items-center">
+              <img
+                src={skincare}
+                className="rounded-lg h-[80%] w-[80%]"
+                alt="image"
+              />
               <h6>Skincare</h6>
             </div>
           </div>
