@@ -20,9 +20,9 @@ function Home() {
     <>
       <Navbar />
 
-      <main className="min-w-screen font-light mt-2">
+      <main className="min-w-screen font-light">
         <div className="flex justify-center font-sans-serif items-center min-w-screen">
-          <section className=" flex justify-center items-center mx-5 md:mx-10 bg-[#c38662]">
+          <section className=" flex justify-center items-center bg-[#c38662]">
             <div>
               <img src={bannerimage} />
             </div>
@@ -39,12 +39,12 @@ function Home() {
 
         <hr className="my-10" />
 
-        <section className="flex-col items-center mx-5 md:mx-10">
-          <h1 className="text-center text-3xl font-light my-5 text-[#c38662]">
+        <section className="min-w-screen flex flex-col items-center justify-center mx-5 md:mx-10">
+          <h1 className="text-2xl  md:text-3xl font-light my-5 text-[#c38662]">
             Top Categories
           </h1>
           <div className="flex items-center justify-center">
-            <div className="flex flex-col justify-center items-center ">
+            <div className="flex flex-col justify-center items-center">
               <img
                 src={newlaunch}
                 className="rounded-lg h-[80%] w-[80%]"
@@ -84,7 +84,7 @@ function Home() {
         <hr className="my-10" />
 
         <section className="flex-col items-center mx-5 md:mx-10">
-          <h1 className="text-center text-3xl font-light my-2 text-[#c38662]">
+          <h1 className="text-center text-2xl md:text-3xl font-light my-2 text-[#c38662]">
             Best Of Beauty On Offer
           </h1>
           <div className="flex items-center justify-center">
