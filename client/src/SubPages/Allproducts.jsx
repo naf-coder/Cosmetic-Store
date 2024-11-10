@@ -5,15 +5,15 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 function Allproducts() {
-  // const inputRef = useRef();
   const [productData, setProductData] = useState([]);
   const [isLoading, setLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const search = async () => {
     setLoading(true);
     try {
       const { data } = await axios.get(
-        `https://makeup-api.herokuapp.com/api/v1/products.json`
+        `http://makeup-api.herokuapp.com/api/v1/products.json`
       );
       setProductData(data);
       setLoading(false);
@@ -26,6 +26,14 @@ function Allproducts() {
   useEffect(() => {
     search();
   }, []);
+
+  const handleSearch = (e) => {
+    setSearchQuery(e.target.value.toLowerCase());
+  };
+
+  const filteredProducts = productData.filter((item) => {
+    item.name.toLowerCase().includes(searchQuery);
+  });
 
   if (isLoading) {
     return (
@@ -45,13 +53,15 @@ function Allproducts() {
             type="text"
             placeholder="Explor Our Beauty Collections"
             className="w-64 rounded-lg p-2 text-center border border-black"
+            value={searchQuery}
+            onChange={handleSearch}
           />
           <button className="w-10 h-10 rounded-lg flex items-center justify-center ml-2 border border-black">
             <IoIosSearch />
           </button>
         </section>
         <div className="flex flex-wrap items-center justify-center space-y-2 space-x-2 ">
-          {productData.map((item) => (
+          {filteredProducts.map((item) => (
             <Card
               key={item.id}
               price={item.price}
