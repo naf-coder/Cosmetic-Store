@@ -9,7 +9,7 @@ function Allproducts() {
   const [isLoading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
 
-  const search = async () => {
+  const fetchProducts = async () => {
     setLoading(true);
     try {
       const { data } = await axios.get(
@@ -24,16 +24,16 @@ function Allproducts() {
   };
 
   useEffect(() => {
-    search();
+    fetchProducts();
   }, []);
 
   const handleSearch = (e) => {
     setSearchQuery(e.target.value.toLowerCase());
   };
 
-  const filteredProducts = productData.filter((item) => {
-    item.name.toLowerCase().includes(searchQuery);
-  });
+  const filteredProducts = productData.filter((item) =>
+    item.name.toLowerCase().includes(searchQuery)
+  );
 
   if (isLoading) {
     return (

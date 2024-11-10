@@ -15,8 +15,8 @@ import Lipstick from "./SubPages/Lipstick";
 import Mascara from "./SubPages/Mascara";
 import Nailpolish from "./SubPages/Nailpolish";
 import Cart from "./Pages/Cart";
-import Allproducts from "./SubPages/Allproducts";
 import Blush from "./SubPages/Blush";
+import Allproducts from "./Pages/Allproducts";
 
 export const CartContext = createContext();
 
@@ -41,7 +41,7 @@ function App() {
           <Route path={"/mascara"} element={<Mascara />} />
           <Route path={"/nailpolish"} element={<Nailpolish />} />
           <Route path={"/cart"} element={<Cart />} />
-          <Route path={"/allproducts"} element={<Allproducts />} />
+          <Route path={"/allproducts"} elements={<Allproducts />} />
         </Routes>
       </CartContext.Provider>
     </>
