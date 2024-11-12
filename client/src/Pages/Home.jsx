@@ -7,9 +7,9 @@ import haircare from "../assets/haircare.jpg";
 import skincare from "../assets/skincare.jpeg";
 import banner from "../assets/banner.jpeg";
 import bannerimage from "../assets/banner-image.png";
-import dior from "../assets/dior.jpg";
-import maybeline from "../assets/Maybelline_logo.png";
-import elf from "../assets/Elf_new_logo.png";
+import dior from "../assets/W1.png";
+import maybeline from "../assets/W3.png";
+import elf from "../assets/W2.png";
 
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
@@ -93,7 +93,7 @@ function Home() {
             <div className="flex flex-col justify-center items-center m-2">
               <div className="relative bg-[url('/src/assets/photo3.jpg')] bg-cover bg-center h-[40vh] w-[40vh] rounded-lg flex justify-center items-center">
                 <div className="absolute inset-0 bg-black opacity-40 rounded-lg"></div>
-                <img src={elf} className="h-16 w-36" />
+                <img src={elf} className="h-auto w-36" />
               </div>
               <p className="font-semibold text-2xl text-black font-poppins">
                 Up to 30% off
@@ -102,7 +102,7 @@ function Home() {
             <div className="flex flex-col justify-center items-center m-2 ">
               <div className="relative bg-[url('/src/assets/photo1.jpg')] bg-cover bg-center h-[40vh] w-[40vh] rounded-lg flex justify-center items-center">
                 <div className="absolute inset-0 bg-black opacity-40 rounded-lg"></div>
-                <img src={dior} className="h-10 w-24" />
+                <img src={dior} className="h-auto w-24" />
               </div>
               <p className=" font-semibold text-2xl text-black font-poppins ">
                 Flat 25% off
@@ -114,7 +114,7 @@ function Home() {
             <div className="flex flex-col justify-center items-center m-2 ">
               <div className="relative bg-[url('/src/assets/photo2.jpg')] bg-cover bg-center h-[40vh] w-[40vh] rounded-lg flex justify-center items-center">
                 <div className="absolute inset-0 bg-black opacity-40 rounded-lg"></div>
-                <img src={maybeline} className="h-8 w-[60%]" />
+                <img src={maybeline} className="h-auto w-48" />
               </div>
               <p className=" text-2xl text-black font-semibold ">
                 Up to 40% off
