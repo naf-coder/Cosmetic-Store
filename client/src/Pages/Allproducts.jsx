@@ -51,7 +51,7 @@ function Allproducts() {
         <section className="flex justify-center items-center my-3">
           <input
             type="text"
-            placeholder="Explor Our Beauty Collections"
+            placeholder="Search Our Beauty Collections"
             className="w-64 rounded-lg p-2 text-center border border-[#c38662]"
             onChange={handleSearch}
             value={searchQuery}
