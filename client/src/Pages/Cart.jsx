@@ -1,21 +1,21 @@
 import { IoMdArrowRoundBack } from "react-icons/io";
-import { Link, useNavigate } from "react-router-dom"; // If using react-router-dom
+import { Link, useNavigate } from "react-router-dom";
+
 import { CartContext } from "../App";
 import { useContext } from "react";
 import Cartcard from "../components/Cartcard";
 
 function Cart() {
-  const navigate = useNavigate(); // Initialize for routing back
+  const navigate = useNavigate();
 
   const handleBack = () => {
-    navigate(-1); // This will go back to the previous page
+    navigate(-1);
   };
   const { cart } = useContext(CartContext);
 
   return (
     <>
       <main className="min-h-screen absolute left-0 right-0 top-0 bg-white">
-        {/* Back button and "Bag" header */}
         <section className="flex items-center p-4">
           <button onClick={handleBack}>
             <IoMdArrowRoundBack size={24} />
@@ -24,7 +24,6 @@ function Cart() {
         </section>
 
         <section className="flex flex-wrap justify-center items-center">
-          {/* Empty cart message */}
           {cart[0] ? (
             <>
               {cart.map((item) => (

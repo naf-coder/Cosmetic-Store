@@ -1,8 +1,8 @@
 import Card from "../components/Card";
 import Navbar from "../components/Navbar";
-import { IoIosSearch } from "react-icons/io";
-import { useState, useEffect } from "react";
+import { IoSearch } from "react-icons/io5";
 import axios from "axios";
+import { useEffect, useState } from "react";
 
 function Allproducts() {
   const [productData, setProductData] = useState([]);
@@ -47,20 +47,23 @@ function Allproducts() {
   return (
     <>
       <Navbar />
-      <main className="min-w-screen font-light mx-5 md:mx-10 flex-col ">
+      <main className="min-w-screen font-ligh flex-col ">
         <section className="flex justify-center items-center my-3">
           <input
             type="text"
             placeholder="Explor Our Beauty Collections"
-            className="w-64 rounded-lg p-2 text-center border border-black"
-            value={searchQuery}
+            className="w-64 rounded-lg p-2 text-center border border-[#c38662]"
             onChange={handleSearch}
+            value={searchQuery}
           />
-          <button className="w-10 h-10 rounded-lg flex items-center justify-center ml-2 border border-black">
-            <IoIosSearch />
+          <button
+            className="w-10 h-10 rounded-lg flex items-center justify-center ml-2 border border-[#c38662]"
+            onClick={setSearchQuery}
+          >
+            <IoSearch className="text-[#c38662]" />
           </button>
         </section>
-        <div className="flex flex-wrap items-center justify-center space-y-2 space-x-2 ">
+        <div className="flex flex-wrap items-center justify-center ">
           {filteredProducts.map((item) => (
             <Card
               key={item.id}
@@ -77,5 +80,4 @@ function Allproducts() {
     </>
   );
 }
-
 export default Allproducts;

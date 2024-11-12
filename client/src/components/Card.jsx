@@ -10,7 +10,7 @@ const Card = (props) => {
   };
   return (
     <>
-      <div className="relative hover:bottom-2 h-[40vh] md:h-[60vh] w-[10vh] md:w-[20%]  flex flex-col items-center justify-center border border-[#c38662]  rounded-lg shadow-2xl  overflow-hidden ">
+      <div className="relative hover:bottom-2 h-[40vh] md:h-[60vh] w-[20vh] md:w-[20%]  flex flex-col items-center justify-center border border-[#c38662]  rounded-lg shadow-2xl  overflow-hidden m-2 ">
         <img
           src={props.image}
           alt="Product image"
@@ -29,7 +29,7 @@ const Card = (props) => {
           </span>
           <button
             onClick={() => handleAddToBag(props)}
-            className="bg-[#c38662] text-white px-4 py-2 rounded-lg"
+            className="bg-[#c38662] text-white px-2 md:px-4 py-1 md:py-2 rounded-lg font-light text-sm md:text-lg"
           >
             {props.button || "Add to Bag"}
           </button>

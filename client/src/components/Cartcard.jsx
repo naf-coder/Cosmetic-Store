@@ -15,7 +15,7 @@ function Cartcard(props) {
 
   return (
     <>
-      <div className=" h-[40vh] md:h-[60vh] w-[10vh] md:w-[20%]  flex flex-col items-center justify-center border border-[#c38662]  rounded-lg shadow-2xl  overflow-hidden ">
+      <div className=" h-[40vh] md:h-[60vh] w-[20vh] md:w-[20%]  flex flex-col items-center justify-center border border-[#c38662]  rounded-lg shadow-2xl  overflow-hidden m-2 ">
         <img
           src={props.image}
           alt="Product image"

@@ -2,9 +2,6 @@ import { useState, useContext } from "react";
 
 import { FaBars } from "react-icons/fa6"; // bar icon from react icon
 import { HiOutlineShoppingBag } from "react-icons/hi2";
-// import { IoIosSearch } from "react-icons/io";
-// import { CiHeart } from "react-icons/ci";
-
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import { CartContext } from "../App";
@@ -12,7 +9,6 @@ import { CartContext } from "../App";
 function Navbar() {
   const [openBar, setOpenBar] = useState(false);
   const { cart } = useContext(CartContext);
-  console.log("Cart: ", cart);
 
   return (
     <header className="min-w-screen font-light bg-[#e6bba2] ">
@@ -34,12 +30,16 @@ function Navbar() {
               <li className="m-2 hover:font-bold hover:text-[#5e2f14]">
                 <Link to={"/"}>HOME</Link>
               </li>
+              <li className="m-2 hover:font-bold hover:text-[#5e2f14] ">
+                <Link to={"/allproducts"}>ALL PRODUCTS</Link>
+              </li>
               <li className="m-2 hover:font-bold hover:text-[#5e2f14]">
                 <Link to={"/products"}>PRODUCTS</Link>
               </li>
               <li className="m-2 hover:font-bold hover:text-[#5e2f14]">
                 <Link to={"/brands"}>BRANDS</Link>
               </li>
+
               <li className="m-2 hover:font-bold hover:text-[#5e2f14] ">
                 <Link to={"/offers"}>OFFERS</Link>
               </li>
@@ -51,7 +51,7 @@ function Navbar() {
                   <HiOutlineShoppingBag className="mr-2 text-3xl text-[#53280f] relative" />
                 </Link>
                 {/* Update cart count */}
-                <span className="absolute top-[6.5%] right-[2.5%] w-5 h-5 text-sm text-white font-semibold rounded-full bg-[#5e2f14]  ">
+                <span className="absolute top-10 md:top-[6.5%] right-6 md:right-[2.5%] w-5 h-5 text-sm text-white font-semibold rounded-full bg-[#5e2f14]  ">
                   {cart.length}
                 </span>
               </button>
@@ -64,12 +64,16 @@ function Navbar() {
               <li className="m-2 hover:font-bold hover:text-[#6f4024] ">
                 <Link to={"/"}>HOME</Link>
               </li>
+              <li className="m-2 hover:font-bold hover:text-[#5e2f14] ">
+                <Link to={"/allproducts"}>ALL PRODUCTS</Link>
+              </li>
               <li className="m-2 hover:font-bold hover:text-[#6f4024]">
                 <Link to={"/products"}>PRODUCTS</Link>
               </li>
               <li className="m-2 hover:font-bold hover:text-[#6f4024]">
                 <Link to={"/brands"}>BRANDS</Link>
               </li>
+
               <li className="m-2 hover:font-bold hover:text-[#6f4024]">
                 <Link to={"/offers"}>OFFERS</Link>
               </li>

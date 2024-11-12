@@ -39,8 +39,7 @@ function Mascara() {
       <Navbar />
       <hr />
       <main className="min-w-screen font-light">
-        <h1 className="text-center text-2xl my-5">Mascara</h1>
-        <div className="flex flex-wrap items-center justify-center space-y-2 space-x-2">
+        <div className="flex flex-wrap items-center justify-center">
           {productData.map((item) => (
             <Card
               key={item.id}

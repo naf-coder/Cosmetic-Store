@@ -41,7 +41,7 @@ function App() {
           <Route path={"/mascara"} element={<Mascara />} />
           <Route path={"/nailpolish"} element={<Nailpolish />} />
           <Route path={"/cart"} element={<Cart />} />
-          <Route path={"/allproducts"} elements={<Allproducts />} />
+          <Route path={"/allproducts"} element={<Allproducts />} />
         </Routes>
       </CartContext.Provider>
     </>

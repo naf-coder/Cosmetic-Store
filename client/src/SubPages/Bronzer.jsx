@@ -39,9 +39,8 @@ function Bronzer() {
     <>
       <Navbar />
       <hr />
-      <main className="min-w-screen font-light mx-5 md:mx-10 ">
-        {/* <h1 className="text-center text-2xl my-5">Bronzer</h1> */}
-        <div className="flex flex-wrap items-center justify-center space-y-2 space-x-2">
+      <main className="min-w-screen font-light">
+        <div className="flex flex-wrap items-center justify-center">
           {productData.map((item) => (
             <Card
               key={item.id}
