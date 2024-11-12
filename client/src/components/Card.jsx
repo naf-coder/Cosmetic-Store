@@ -23,7 +23,7 @@ const Card = (props) => {
         <p>{props.category}</p>
         <p>{props.productcolors}</p>
         <p>{props.rating}</p>
-        <div className="flex justify-between items-center min-w-full p-5">
+        <div className="flex justify-between items-center min-w-full p-2 md:p-5">
           <span className="text-xl font-bold text-gray-900">
             ${props.price}
           </span>
