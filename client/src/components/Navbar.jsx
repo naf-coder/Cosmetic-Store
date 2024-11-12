@@ -11,7 +11,7 @@ function Navbar() {
   const { cart } = useContext(CartContext);
 
   return (
-    <header className="min-w-screen font-light bg-[#e6bba2] ">
+    <header className="min-w-screen font-light bg-[#e6bba2] sticky top-0 z-50 shadow-md">
       <nav className="sm:flex-col justify-between items-center  mx-5 md:mx-10 py-4 ">
         <section>
           <div className="flex justify-between items-center">
@@ -51,7 +51,7 @@ function Navbar() {
                   <HiOutlineShoppingBag className="mr-2 text-3xl text-[#53280f] relative" />
                 </Link>
                 {/* Update cart count */}
-                <span className="absolute top-10 md:top-[6.5%] right-6 md:right-[2.5%] w-5 h-5 text-sm text-white font-semibold rounded-full bg-[#5e2f14]  ">
+                <span className="absolute top-10 md:top-10 right-6 md:right-[2.5%] w-5 h-5 text-sm text-white font-semibold rounded-full bg-[#5e2f14]  ">
                   {cart.length}
                 </span>
               </button>

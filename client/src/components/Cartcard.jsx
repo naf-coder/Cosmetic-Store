@@ -7,15 +7,13 @@ function Cartcard(props) {
   const { cart, setCart } = useContext(CartContext);
 
   const handleDeleteFromCart = (item, cart) => {
-    console.log("Item: ", item);
-    console.log("cart", cart);
     const filteredArray = cart.filter((cartItem) => cartItem.id !== item.id);
     setCart(filteredArray);
   };
 
   return (
     <>
-      <div className=" h-[43vh] md:h-[60vh] w-[20vh] md:w-[20%]  flex flex-col items-center justify-center border border-[#c38662]  rounded-lg shadow-2xl  overflow-hidden m-2 ">
+      <div className=" h-[43npm vh] md:h-[60vh] w-[20vh] md:w-[20%]  flex flex-col items-center justify-center border border-[#c38662]  rounded-lg shadow-2xl  overflow-hidden m-2 ">
         <img
           src={props.image}
           alt="Product image"
@@ -30,9 +28,9 @@ function Cartcard(props) {
         <p>{props.productcolors}</p>
         <p>{props.rating}</p>
         <div className="flex flex-col justify-center items-center min-w-full">
-          <button className="bg-[#c38662] text-white w-[50%] h-10 rounded-lg m-1">
+          {/* <button className="bg-[#c38662] text-white w-[50%] h-10 rounded-lg m-1">
             Added
-          </button>
+          </button> */}
           <button
             onClick={() => handleDeleteFromCart(props, cart)}
             className="bg-[#c38662] text-white w-[50%] h-10 rounded-lg m-1"
