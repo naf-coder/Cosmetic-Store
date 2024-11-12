@@ -20,9 +20,8 @@ function Products() {
           </Link>
           <Link to={"/bronzer"}>
             <div className="relative h-[40vh] w-[40vh] border border-[#c38662] px-10 py-10 bg-[url('/src/assets/bronzer.jpeg')] bg-cover bg-center m-3 flex items-center justify-center rounded-lg overflow-hidden">
-              {/* Overlay to Dim Background */}
               <div className="absolute inset-0 bg-black opacity-40 rounded-lg"></div>
-              {/* Text Content */}
+
               <p className="relative text-white font-light z-10">Bronzer</p>
             </div>
           </Link>

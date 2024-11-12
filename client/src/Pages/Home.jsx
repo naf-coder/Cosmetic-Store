@@ -131,7 +131,10 @@ function Home() {
 
         <hr className="my-10" />
 
-        <section className="min-w-screen mx-5 flex flex-wrap  justify-center items-center">
+        <section className="min-w-screen mx-5 flex flex-col flex-wrap  justify-center items-center">
+          <h1 className="text-center text-2xl  md:text-3xl  my-5 font-thin text-[#c38662]">
+            Brands
+          </h1>
           <BrandsList />
         </section>
       </main>
