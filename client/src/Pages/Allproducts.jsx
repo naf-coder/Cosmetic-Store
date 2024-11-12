@@ -13,7 +13,7 @@ function Allproducts() {
     setLoading(true);
     try {
       const { data } = await axios.get(
-        `http://makeup-api.herokuapp.com/api/v1/products.json`
+        `https://makeup-api.herokuapp.com/api/v1/products.json`
       );
       setProductData(data);
       setLoading(false);
