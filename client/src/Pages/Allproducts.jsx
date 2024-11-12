@@ -1,6 +1,6 @@
 import Card from "../components/Card";
 import Navbar from "../components/Navbar";
-import { IoSearch } from "react-icons/io5";
+
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -56,12 +56,6 @@ function Allproducts() {
             onChange={handleSearch}
             value={searchQuery}
           />
-          <button
-            className="w-10 h-10 rounded-lg flex items-center justify-center ml-2 border border-[#c38662]"
-            onClick={setSearchQuery}
-          >
-            <IoSearch className="text-[#c38662]" />
-          </button>
         </section>
         <div className="flex flex-wrap items-center justify-center ">
           {filteredProducts.map((item) => (
