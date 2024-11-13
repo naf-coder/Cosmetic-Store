@@ -18,7 +18,7 @@ const Card = (props) => {
       <img
         src={props.image}
         alt="Product image"
-        className="w-full h-48 object-cover"
+        className="w-full h-48 object-cover p-2"
       />
       <p className="text-center text-base font-bold text-gray-800">
         {props.name}
@@ -27,7 +27,9 @@ const Card = (props) => {
       <p>{props.productcolors}</p>
       <p>{props.rating}</p>
       <div className="flex justify-between items-center min-w-full p-2 md:p-5">
-        <span className="text-xl font-bold text-gray-900">${props.price}</span>
+        <span className="text-lg md:text-xl font-bold text-gray-900">
+          ${props.price}
+        </span>
         <button
           onClick={() => handleAddToBag(props)}
           className={`bg-[#c38662] text-white px-2 md:px-4 py-1 md:py-2 rounded-lg font-light text-sm md:text-lg ${
