@@ -14,13 +14,13 @@ const Card = (props) => {
   };
 
   return (
-    <div className="relative hover:bottom-2 h-[40vh] md:h-[60vh] w-[20vh] md:w-[20%] flex flex-col items-center justify-center border border-[#c38662] rounded-lg shadow-2xl overflow-hidden m-2">
+    <div className="relative hover:bottom-2 h-[42vh] md:h-[55vh] w-40 md:w-[20%] flex flex-col items-center justify-center border border-[#c38662] rounded-lg shadow-2xl overflow-hidden m-2">
       <img
         src={props.image}
         alt="Product image"
-        className="w-full h-48 object-cover p-2"
+        className="w-full h-40 object-cover p-2"
       />
-      <p className="text-center text-base font-bold text-gray-800">
+      <p className="text-center text-sm md:text-lg font-bold text-gray-800 p-2">
         {props.name}
       </p>
       <p>{props.category}</p>
