@@ -28,9 +28,6 @@ function Cartcard(props) {
         <p>{props.productcolors}</p>
         <p>{props.rating}</p>
         <div className="flex flex-col justify-center items-center min-w-full">
-          {/* <button className="bg-[#c38662] text-white w-[50%] h-10 rounded-lg m-1">
-            Added
-          </button> */}
           <button
             onClick={() => handleDeleteFromCart(props, cart)}
             className="bg-[#c38662] text-white w-[50%] h-10 rounded-lg m-1"

@@ -22,13 +22,6 @@ const PhotoGallery = () => {
     <section className=" flex justify-center items-center">
       <div className="relative px-2 ">
         <img src={images[currentIndex]} />
-        {/* <div className="font-extrabold font-poppins relative  bottom-48 left-20 text-3xl">
-          <p>NEW! SUPER STAY TEDDY </p>
-          <p>TINT</p>
-        </div>
-        <button className="bg-black rounded-lg text-white relative bottom-40 left-20 px-10 py-2">
-          Shop Now
-        </button> */}
       </div>
       <button onClick={goToNextImage} className="">
         <IoIosArrowDropright className="text-[#c38662]" size={20} />
