@@ -80,17 +80,6 @@ function Navbar() {
             </ul>
           </div>
         </section>
-
-        {/* <section className="flex justify-center items-center">
-          <input
-            type="text"
-            placeholder="Explor Our Beauty Collections"
-            className="w-64 rounded-lg p-2 text-center border border-black"
-          />
-          <div className="w-10 h-10 rounded-lg flex items-center justify-center ml-2 border border-black">
-            <IoIosSearch />
-          </div>
-        </section> */}
       </nav>
     </header>
   );
