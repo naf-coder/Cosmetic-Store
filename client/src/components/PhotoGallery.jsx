@@ -1,19 +1,12 @@
 import { useState } from "react";
 
 import { IoIosArrowDropright } from "react-icons/io";
-
-// Import images from the assets folder
 import image1 from "../assets/photogallery.jpg";
 import image2 from "../assets/photogallery2.jpg";
 
 const PhotoGallery = () => {
-  // Array of imported images
   const images = [image1, image2];
-
-  // State to keep track of the current image index
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Function to go to the next image
   const goToNextImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };

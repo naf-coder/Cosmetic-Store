@@ -14,26 +14,41 @@ const Card = (props) => {
   };
 
   return (
-    <div className="relative hover:bottom-2 h-[42vh] md:h-[55vh] w-40 md:w-[20%] flex flex-col items-center justify-center border border-[#c38662] rounded-lg shadow-2xl overflow-hidden m-2">
+    <div className="relative group h-[40vh] md:h-[50vh] w-44 sm:w-[60] md:w-[40%] lg:w-[20%] xl:w-[15%] flex flex-col items-center justify-between border border-[#c38662] rounded-lg shadow-lg overflow-hidden m-2 transition-transform duration-300 hover:scale-105">
+      {/* Image Section */}
       <img
         src={props.image}
         alt="Product image"
-        className="w-full h-40 object-cover p-2"
+        className="w-full h-36 sm:h-36 md:h-40 object-cover p-2"
       />
-      <p className="text-center text-sm md:text-lg font-bold text-gray-800 p-2">
-        {props.name}
-      </p>
-      <p>{props.category}</p>
-      <p>{props.productcolors}</p>
-      <p>{props.rating}</p>
-      <div className="flex justify-between items-center min-w-full p-2 md:p-5">
-        <span className="text-lg md:text-xl font-bold text-gray-900">
+
+      {/* Content Section */}
+      <div className="text-center px-2 sm:px-4 py-2">
+        <h3 className="text-sm sm:text-base md:text-lg font-semibold text-gray-800 flex flex-wrap items center justify-center h-auto w-full p-4">
+          {props.name}
+        </h3>
+
+        <p className="text-xs sm:text-sm md:text-base text-gray-600 flex flex-wrap justify-center items-center w-full ">
+          {props.brand}
+        </p>
+
+        <p className="text-xs sm:text-sm md:text-base text-gray-500 flex flex-wrap items center justify-center w-full ">
+          {props.productcolors}
+        </p>
+        <p className="text-xs sm:text-sm md:text-base text-gray-400 ">
+          {props.rating && `⭐ ${props.rating.toFixed(1)}`}
+        </p>
+      </div>
+
+      {/* Footer Section */}
+      <div className="flex justify-between items-center w-full px-3 sm:px-4 py-2">
+        <span className="text-lg sm:text-xl font-bold text-gray-900">
           ${props.price}
         </span>
         <button
           onClick={() => handleAddToBag(props)}
-          className={`bg-[#c38662] text-white px-2 md:px-4 py-1 md:py-2 rounded-lg font-light text-sm md:text-lg ${
-            isAdded ? "bg-[#c38662]" : "bg-[#c38662]"
+          className={`bg-[#c38662] text-white px-3 sm:px-5 py-1 sm:py-2 rounded-lg font-light text-sm md:text-base transition duration-200 ${
+            isAdded ? "bg-[#040201] cursor-not-allowed" : ""
           }`}
           disabled={isAdded}
         >
@@ -48,8 +63,8 @@ Card.propTypes = {
   name: PropTypes.string,
   brand: PropTypes.string,
   price: PropTypes.number,
-  category: PropTypes.string,
-  productcolors: PropTypes.string,
+
+  productcolors: PropTypes.number,
   rating: PropTypes.number,
   image: PropTypes.string,
   button: PropTypes.string,

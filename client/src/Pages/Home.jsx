@@ -29,9 +29,13 @@ function Home() {
               <img src={bannerimage} />
             </div>
             <div className="w-[30%] flex flex-col justify-center items-center font-poppins text-5xl md:text-9xl ">
-              <h1>BE</h1>
-              <h1>AU</h1>
-              <h1>TY</h1>
+              <h1>
+                BE
+                <br />
+                AU
+                <br />
+                TY
+              </h1>
             </div>
             <div>
               <img src={banner} />
@@ -41,42 +45,37 @@ function Home() {
 
         <hr className="my-10" />
 
-        <section className="min-w-screen flex flex-col items-center justify-center mx-5 md:mx-10">
-          <h1 className="text-2xl  md:text-3xl font-light my-5 text-[#c38662]">
+        {/* Top Categories */}
+        <section className="flex flex-col items-center px-5 md:px-10">
+          <h1 className="text-2xl md:text-3xl text-[#c38662] font-light my-5">
             Top Categories
           </h1>
-          <div className="flex items-center justify-center">
-            <div className="flex flex-col justify-center items-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+            <div className="flex flex-col items-center">
               <img
                 src={newlaunch}
-                className="rounded-lg h-[80%] w-[80%]"
-                alt="image"
+                className="rounded-lg w-full"
+                alt="New Launch"
               />
               <h6>New Launch</h6>
             </div>
-            <Link to={"/allproducts"}>
-              <div className="flex flex-col justify-center items-center">
-                <img
-                  src={makeup}
-                  className="rounded-lg  h-[80%] w-[80%]"
-                  alt="image"
-                />
-                <h6>Makeup</h6>
-              </div>
+            <Link to="/products" className="flex flex-col items-center">
+              <img src={makeup} className="rounded-lg w-full" alt="Makeup" />
+              <h6>Makeup</h6>
             </Link>
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col items-center">
               <img
                 src={haircare}
-                className="rounded-lg h-[80%] w-[80%]"
-                alt="image"
+                className="rounded-lg w-full"
+                alt="Haircare"
               />
               <h6>Haircare</h6>
             </div>
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col items-center">
               <img
                 src={skincare}
-                className="rounded-lg h-[80%] w-[80%]"
-                alt="image"
+                className="rounded-lg w-full"
+                alt="Skincare"
               />
               <h6>Skincare</h6>
             </div>

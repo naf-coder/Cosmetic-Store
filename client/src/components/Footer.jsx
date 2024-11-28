@@ -2,6 +2,7 @@ import { FaLinkedin, FaFacebookSquare } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaXTwitter } from "react-icons/fa6";
 import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -31,9 +32,15 @@ function Footer() {
             <div>
               <ul className="my-5">
                 <li className="font-semibold text-xl">Categories</li>
-                <li>Face</li>
-                <li>Nail</li>
-                <li>Lips</li>
+                <li>
+                  <Link to={"/brands"}>Brands</Link>
+                </li>
+                <li>
+                  <Link to={"/offers"}>Offers</Link>
+                </li>
+                <li>
+                  <Link to={"/products"}>Products</Link>{" "}
+                </li>
               </ul>
             </div>
 

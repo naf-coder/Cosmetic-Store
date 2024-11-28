@@ -27,20 +27,20 @@ function Navbar() {
 
             {/* Desktop Menu */}
             <ul className="hidden md:flex space-x-4 text-[#53280f] text-base">
-              <li className="m-2 hover:font-bold hover:text-[#5e2f14]">
+              <li className="m-2 border-b-2 border-transparent hover:border-current hover:text-[#5e2f14]">
                 <Link to={"/"}>HOME</Link>
               </li>
-              <li className="m-2 hover:font-bold hover:text-[#5e2f14] ">
+              {/* <li className="m-2 border-b-2 border-transparent hover:border-current hover:text-[#5e2f14] ">
                 <Link to={"/allproducts"}>ALL PRODUCTS</Link>
-              </li>
-              <li className="m-2 hover:font-bold hover:text-[#5e2f14]">
+              </li> */}
+              <li className="m-2 border-b-2 border-transparent hover:border-current hover:text-[#5e2f14]">
                 <Link to={"/products"}>PRODUCTS</Link>
               </li>
-              <li className="m-2 hover:font-bold hover:text-[#5e2f14]">
+              <li className="m-2 border-b-2 border-transparent hover:border-current hover:text-[#5e2f14]">
                 <Link to={"/brands"}>BRANDS</Link>
               </li>
 
-              <li className="m-2 hover:font-bold hover:text-[#5e2f14] ">
+              <li className="m-2 border-b-2 border-transparent hover:border-current hover:text-[#5e2f14] ">
                 <Link to={"/offers"}>OFFERS</Link>
               </li>
             </ul>
@@ -61,20 +61,20 @@ function Navbar() {
           {/* Mobile Menu */}
           <div className={`${openBar ? "block" : "hidden"} relative md:hidden`}>
             <ul className="flex flex-col items-center">
-              <li className="m-2 hover:font-bold hover:text-[#6f4024] ">
+              <li className="m-2 border-b-2 border-transparent hover:border-current hover:text-[#6f4024] ">
                 <Link to={"/"}>HOME</Link>
               </li>
-              <li className="m-2 hover:font-bold hover:text-[#5e2f14] ">
+              {/* <li className="m-2 border-b-2 border-transparent hover:border-current hover:text-[#5e2f14] ">
                 <Link to={"/allproducts"}>ALL PRODUCTS</Link>
-              </li>
-              <li className="m-2 hover:font-bold hover:text-[#6f4024]">
+              </li> */}
+              <li className="m-2 border-b-2 border-transparent hover:border-current hover:text-[#6f4024]">
                 <Link to={"/products"}>PRODUCTS</Link>
               </li>
-              <li className="m-2 hover:font-bold hover:text-[#6f4024]">
+              <li className="m-2 border-b-2 border-transparent hover:border-current hover:text-[#6f4024]">
                 <Link to={"/brands"}>BRANDS</Link>
               </li>
 
-              <li className="m-2 hover:font-bold hover:text-[#6f4024]">
+              <li className="m-2 border-b-2 border-transparent hover:border-current hover:text-[#6f4024]">
                 <Link to={"/offers"}>OFFERS</Link>
               </li>
             </ul>
